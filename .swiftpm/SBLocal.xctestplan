@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "5AFB75E2-FD5D-47A3-954A-5AD3095DDE45",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "SBLocalTests",
+        "name" : "SBLocalTests"
+      }
+    }
+  ],
+  "version" : 1
+}
