@@ -29,6 +29,7 @@ public actor SBSwiftDataTransactionLocalRepository: SBTransactionLocalRepository
         return records
             .map { $0.toEntity() }
             .map { $0.toDomain() }
+            .sorted { $0.postedDate > $1.postedDate }
     }
 
     //  MARK: - Write
