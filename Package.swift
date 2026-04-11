@@ -16,15 +16,26 @@ let package = Package(
             targets: ["SBLocal"]
         ),
     ],
+    dependencies: [
+        .package(path: "../sbdomain"), // Local
+//        .package(url: "https://github.com/near22boju/sbdomain.git", from: "0.0.01"), // Remote
+    ],
     targets: [
         .target(
             name: "SBLocal",
+            dependencies: [
+                .product(name: "SBDomain", package: "sbdomain"),
+           ],
             path: "Sources/SBLocal",
             resources: [
                 .process("Resources")
             ]        ),
         .testTarget(
-            name: "SBLocalTests", dependencies: ["SBLocal"],
+            name: "SBLocalTests",
+            dependencies: [
+                "SBLocal",
+                .product(name: "SBDomain", package: "sbdomain")
+            ]
         ),
     ]
 )
