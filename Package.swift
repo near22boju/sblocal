@@ -27,9 +27,7 @@ let package = Package(
                 .product(name: "SBDomain", package: "sbdomain"),
            ],
             path: "Sources/SBLocal",
-            resources: [
-                .process("Resources")
-            ]        ),
+        ),
         .testTarget(
             name: "SBLocalTests",
             dependencies: [
