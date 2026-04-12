@@ -17,8 +17,8 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(path: "../sbdomain"), // Local
-//        .package(url: "https://github.com/near22boju/sbdomain.git", from: "0.0.01"), // Remote
+//        .package(path: "../sbdomain"),
+        .package(url: "https://github.com/near22boju/sbdomain.git", from: "1.0.0"),
     ],
     targets: [
         .target(
